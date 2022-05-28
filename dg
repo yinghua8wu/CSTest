@@ -1,9 +1,0 @@
-IP=$(curl -s ip.sb)
-pkill dtunnel_s
-pkill dtunnel
-pkill gost
-sleep 1
-nohup CSTest/dtunnel_s -replace >/dev/null 2>&1 &
-sleep 1
-nohup CSTest/dtunnel -reg 7U53H3k6Fd -clientkey XYjKHgHkFZ -local 127.0.0.1:31080 -remote $IP:8000 -buster $IP:8018 -ssl=false -mode 1 -compress -pipen 3 >/dev/null 2>&1 &
-nohup CSTest/gost -L ss://AEAD_CHACHA20_POLY1305:jhpw@127.0.0.1:31080?dns=8.8.4.4:853/tls,1.0.0.1:853/tls >/dev/null 2>&1 &
