@@ -14,7 +14,7 @@
     "interval": 40,
     "resend": 0,
     "nc": 0,
-    "sockbuf": 4194304,
+    "sockbuf": 16777217,
     "keepalive": 10,
     "snmplog": "",
     "snmpperiod": 60,
